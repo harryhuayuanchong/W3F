@@ -17,3 +17,13 @@
 
 ## Quickstart
 ...
+
+## WAGMI
+### What is WAGMI?
+It refers to a set of React Hooks designed for easy interaction with Ethereum blockchain and wallets. These Hooks are intended to simplify the integration and manipulation of Web3 functionalities such as wallet connections, transaction sending, and smart contract interactions for developers.
+
+### Wagmi Workflow
+1. Initialize - Integrate WAGMI and set up related configurations (such as the blockchain network to connect)
+2. Wallet Interaction - Handle wallet connections, disconnections, and status monitoring using Hooks
+3. Data Interaction - Read blockchain data or conduct transactions through smart contracts
+4. UI Update - Update your React application interface based on the results of blockchain interactions
