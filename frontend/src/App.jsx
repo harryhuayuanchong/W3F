@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import WalletConnect from './components/WalletConnect'
+import GasTracker from './components/GasTracker'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,9 +23,16 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        {/* <p>
           <WalletConnect />
-        </p>
+        </p> */}
+        <div>
+          <WalletConnect />
+        </div>
+        <div>
+          <p>Some text here</p>
+          {/* <GasTracker /> */}
+        </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
