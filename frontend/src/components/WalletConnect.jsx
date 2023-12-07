@@ -1,9 +1,27 @@
+import { useState } from 'react';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 
 function WalletConnect() {
   const { connect, connectors, error } = useConnect();
   const { disconnect } = useDisconnect();
   const { address, isConnected } = useAccount();
+  const [isConnecting, setIsConnecting] = useState(false);  // 新增狀態來追蹤連接請求
+
+  const handleConnect = async (connector) => {
+    if (isConnecting) {
+      console.log("Please wait, already processing a connect request.");
+      return;
+    }
+  
+    setIsConnecting(true);
+    try {
+      await connect({ connector });
+    } catch (err) {
+      console.error("Error connecting to wallet:", err);
+    } finally {
+      setIsConnecting(false);
+    }
+  };  
 
   return (
     <div>
@@ -14,7 +32,11 @@ function WalletConnect() {
         </>
       ) : (
         connectors.map((connector) => (
-          <button key={connector.id} onClick={() => connect({ connector })}>
+          <button
+            key={connector.id}
+            onClick={() => handleConnect(connector)}
+            disabled={isConnecting}
+          >
             Connect with {connector.name}
           </button>
         ))
