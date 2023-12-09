@@ -27,3 +27,8 @@ It refers to a set of React Hooks designed for easy interaction with Ethereum bl
 2. Wallet Interaction - Handle wallet connections, disconnections, and status monitoring using Hooks
 3. Data Interaction - Read blockchain data or conduct transactions through smart contracts
 4. UI Update - Update your React application interface based on the results of blockchain interactions
+
+## RainbowKit
+
+* It allows you to fully customize color, border raduis, wallet providers and a lot more. All through an easy-to-use API.
+* Dvelopers can focus on building amazing products and communities for their users
