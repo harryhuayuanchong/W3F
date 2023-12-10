@@ -1,5 +1,6 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { HStack, Heading } from "@chakra-ui/react";
+import { ThemeButton } from "../ThemeButton";
 
 const Header = () => {
     return (
@@ -12,6 +13,7 @@ const Header = () => {
 
             <HStack>
                 <ConnectButton />
+                <ThemeButton />
             </HStack>
         </HStack>
     )
